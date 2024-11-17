@@ -206,6 +206,21 @@ class LinkList {
             }
         }
     }
+
+    public void merge(int a, int b, Node list2) {
+        Node currNode = head;
+        Node nextNode = head.next;
+        for (int i = 0; i < b + 1; i++) {
+            if (i < a - 1) {
+                currNode = currNode.next;
+                System.out.println("a : " + i);
+            }
+            nextNode = nextNode.next;
+            System.out.println("b :" + i);
+        }
+        System.out.println(nextNode.data);
+        System.out.println(currNode.data);
+    }
 }
 
 public class Dsa25 {
@@ -266,6 +281,9 @@ public class Dsa25 {
         System.out.println("LinkList after sorting :");
         list.traverse();
         // 4 -> 5 -> 10 -> 30 -> 40 -> null
+
+        list.merge(2, 2, null);
+        list.traverse();
     }
 
 }
